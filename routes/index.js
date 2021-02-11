@@ -5,6 +5,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/test', function(req, res, next) {
+  // console.log('req', req);
+  console.log('req.headers.host', req.headers.host);
+  res.send('success');
+});
+
 router.post('/form-test', function(req, res, next) {
   console.log('body', req.body);
   console.log('body values', req.body.values);
